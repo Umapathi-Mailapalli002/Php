@@ -1,54 +1,61 @@
 <?php
 //functions in php
+
 function funciton_name() {
-    echo "Hi, this is virat <br>";
+    echo 'Hi, this is virat <br>';
 }
 
 //call function to exicute
 funciton_name();
 
 //function with return this also same like echo but it return the value
-    function return_function() {
-        return "Hi, this is function with return <br>";
-    }
-   echo return_function();
+
+function return_function() {
+    return 'Hi, this is function with return <br>';
+}
+echo return_function();
 
 //function with parameter
-function function_with_parameter($name, $age){
+
+function function_with_parameter( $name, $age ) {
     return "Hi, iam $name and age $age";
 }
-echo function_with_parameter("Elon Musk", 55);
+echo function_with_parameter( 'Elon Musk', 55 );
 
-echo "<br>";
+echo '<br>';
 //function with default parameter
-function function_with_default_parameter($fruit, $color = "red"){
+
+function function_with_default_parameter( $fruit, $color = 'red' ) {
     return "$fruit and color is $color";
 }
-echo function_with_default_parameter("apple", "red");
-echo "<br>";
+echo function_with_default_parameter( 'apple', 'red' );
+echo '<br>';
 
 //if we do not pass any then it show error show we can overcome this with default parameter
-echo function_with_default_parameter("apple");
-echo "<br>";
+echo function_with_default_parameter( 'apple' );
+echo '<br>';
 
 //if we pass in the default parameter then it overwrite the existing one
-echo function_with_default_parameter("apple", "green");
+echo function_with_default_parameter( 'apple', 'green' );
 
-echo "<br>";
-echo "<br>";
-echo "<br>";
-echo "<h2>Nested functions</h2>";
+echo '<br>';
+echo '<br>';
+echo '<br>';
+echo '<h2>Nested functions</h2>';
 //nested function
-function parent_function(){
-    echo "this is parent function <br>";
-    function child_function(){
-        echo "this is child function";
+
+function parent_function() {
+    echo 'this is parent function <br>';
+
+    function child_function() {
+        echo 'this is child function';
     }
-    child_function();// call the child function inside the parent
+    child_function();
+    // call the child function inside the parent
 }
 //if we call like this then it work and both were called successfully
 // parent_function();
-// echo "<br>";
+// echo '<br>';
 // child_function();
 
 //it's fine this we can call the child functions inside the parent function
@@ -56,11 +63,26 @@ parent_function();
 
 //if we call like this child first and parent second then it Fatal error
 // child_function();
-// echo "<br>";
+// echo '<br>';
 // parent_function();
 /*
-Fatal error: Cannot redeclare child_function() 
-(previously declared in C:\xampp\htdocs\Php\functions.php:45)
- in C:\xampp\htdocs\Php\functions.php on line 44
+Fatal error: Cannot redeclare child_function()
+( previously declared in C:\xampp\htdocs\Php\functions.php:45 )
+in C:\xampp\htdocs\Php\functions.php on line 44
 */
+
+echo '<br>';
+echo '<br>';
+echo '<br>';
+echo '<h2>Variable functions</h2>';
+//variable functions means a function asign to a variable with double quotation or single as
+//a string the when we call the variable with followed parenthis then
+// it call the function which we asign to the variable
+
+function test(){
+    echo "this is test function";
+}
+
+$funct = "test";
+$funct();
 ?>
