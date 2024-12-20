@@ -85,4 +85,21 @@ function test(){
 
 $funct = "test";
 $funct();
+
+
+echo '<br>';
+echo '<br>';
+echo '<br>';
+echo '<h2>Callback</h2>';
+//Callback means a function can pass as a argument to another function
+
+function callback() {
+    echo 'this is a callback funtion ';
+}
+$fun = 'callback';
+
+function recieve_callback( $a ) {
+    echo 'this is callback'. $a();
+}
+recieve_callback( $fun );
 ?>
