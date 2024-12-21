@@ -21,6 +21,12 @@ echo '<pre>';
 print_r( $array );
 echo '</pre>';
 
+//iterate the values
+foreach($array as $item){
+    echo $item;
+    echo "<br>";
+}
+
 //this print like this. this is assign without key then its
 //is called normal array with single dimension
 /* Array
