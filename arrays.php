@@ -133,4 +133,61 @@ for ($i=0; $i < count($cars); $i++) {
 BMW 15 13
 Saab 5 2
 Land Rover 17 15 */
+
+
+echo "<br/>";
+echo "<br/>";
+echo "<br/>";
+//Multidimensional Associative Array
+$modals = array(
+    array("brand" => "Ford", "model" => "Mustang", "year" => 2021, "price" => 55000),
+    array("brand" => "Chevrolet", "model" => "Camaro", "year" => 2022, "price" => 62000),
+    array("brand" => "Dodge", "model" => "Challenger", "year" => 2020, "price" => 48000),
+    array("brand" => "Tesla", "model" => "Model S", "year" => 2023, "price" => 85000),
+    array("brand" => "BMW", "model" => "M3", "year" => 2021, "price" => 70000),
+    array("brand" => "Audi", "model" => "A5", "year" => 2022, "price" => 54000),
+    array("brand" => "Mercedes", "model" => "C-Class", "year" => 2023, "price" => 68000),
+    array("brand" => "Toyota", "model" => "Supra", "year" => 2021, "price" => 50000),
+    array("brand" => "Nissan", "model" => "GT-R", "year" => 2022, "price" => 115000),
+    array("brand" => "Porsche", "model" => "911", "year" => 2023, "price" => 150000)
+);
+echo "<pre>";
+print_r($modals);
+echo "</pre>";
+echo "<br/>";
+echo "<br/>";
+//task is to show this data in table
+    array_keys($modals[0]);
+echo "<table border='1'>";
+echo "<thead border= '1'>";
+echo "<tr>";
+echo "<th>";
+echo "brand";
+echo "</th>";
+echo "<th>";
+echo "model";
+echo "</th>";
+echo "<th>";
+echo "year";
+echo "</th>";
+echo "<th>";
+echo "price";
+echo "</th>";
+echo "</tr>";
+echo "</thead>";
+
+echo "<tbody>";
+for($i=0; $i < count($modals) ; $i++){
+  echo "<tr>";
+  foreach ($modals[$i] as $value) {
+   echo "<td>";
+   echo $value;
+   echo "</td>";
+  }
+  echo "</tr>";
+}
+echo "<tbody>";
+echo "</table>";
+
+//task done
 ?>
