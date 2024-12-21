@@ -74,7 +74,7 @@ echo '</pre>';
   foreach($data as $key => $item):
   echo "$key is $item";
   echo "<br>";
-endforeach
+  endforeach;
 
 //output
 
@@ -87,4 +87,50 @@ education is Bca */
 $cars = array("brand" => "Ford", "model" => "Mustang");
 $cars += ["color" => "red", "year" => 1964];
 */
+
+
+echo "<br/>";
+echo "<br/>";
+//Multidimensional arrays
+//nested arrays is called multidimensional arrays
+//arrays in array 
+
+/* 
+$cars = array (
+  array("Volvo",22,18),
+  array("BMW",15,13),
+  array("Saab",5,2),
+  array("Land Rover",17,15)
+);
+*/
+
+$cars = array (
+  array("Volvo",22,18),
+  array("BMW",15,13),
+  array("Saab",5,2),
+  array("Land Rover",17,15)
+);
+
+foreach($cars as $car){
+  foreach($car as $item){
+    echo "$item ";
+  }
+  echo "<br/>";
+}
+
+
+echo "<br/>";
+//with for loop 
+for ($i=0; $i < count($cars); $i++) { 
+  for ($j=0; $j < count($cars[$i]); $j++) { 
+    echo $cars[$i][$j]. " ";
+  }
+  echo "<br/>";
+}
+//output
+
+/* Volvo 22 18
+BMW 15 13
+Saab 5 2
+Land Rover 17 15 */
 ?>
