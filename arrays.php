@@ -12,6 +12,15 @@ Array items can be of any data type
 $myArr = array("Volvo", 15, ["apples", "bananas"], myFunction);
 */
 
+//we can add function in array
+
+/* function myFunction() {
+    echo "I come from a function!";
+  }
+  
+  $myArr = array("Volvo", 15, myFunction);
+  
+  $myArr[2](); */
 //Indexed Array
 //in normal array it consist of index and values like shown in below
 $array = [
@@ -72,4 +81,10 @@ endforeach
 /* name is nitin
 age is 20
 education is Bca */
+
+//To add multiple items to an existing array, you can use the += operator.
+/* 
+$cars = array("brand" => "Ford", "model" => "Mustang");
+$cars += ["color" => "red", "year" => 1964];
+*/
 ?>
