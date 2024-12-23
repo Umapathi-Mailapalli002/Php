@@ -27,4 +27,12 @@ It's called "shadowing" a superglobal, and I don't know why
  that name is unique. 
  */
 
+ //$GLOBALS is an array that contains all global variables.
+ $x = 75;
+  
+function myfunction() {
+  echo $GLOBALS['x'];
+}
+
+myfunction()
 ?>
