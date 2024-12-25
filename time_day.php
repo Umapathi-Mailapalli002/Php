@@ -24,7 +24,6 @@ echo date_default_timezone_get();
 echo "<br>";
 echo date("h");//small letters for 12 hrs format
 //now this print 10
-
 echo "<br>";
 echo date("H");// capital letter for 24 hrs format
 //now this print 10
@@ -33,6 +32,5 @@ echo date("h:i:s"); //for current time then it not show am/pm
 //output => 11:01:16
 echo "<br>";
 echo date("h:i:sa"); //if add a after s then it show am/pm
-//output => 11:01:16am
-
+//output => 11:01:16a
 ?>
