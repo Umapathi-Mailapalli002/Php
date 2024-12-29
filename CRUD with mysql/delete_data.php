@@ -62,6 +62,7 @@ if ( isset( $_POST[ 'btn' ] ) ) {
     $toDelete = $_POST[ 'btn' ];
     $deleteData = $conn->prepare( "DELETE FROM students WHERE id='$toDelete'" );
     if ( $deleteData->execute() ) {
+        header("refresh: 0");
         echo 'Deleted the data from the database';
     } else {
         echo 'record not deleted';
