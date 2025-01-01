@@ -4,10 +4,10 @@ $password = '';
 $host = 'localhost';
 
 try {
-    $conn = new PDO("mysql:host=$host;dbName=college", $username, $password);
+    $conn = new PDO("mysql:host=$host;dbname=college", $username, $password);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-echo "Connection Successfull!!!";
+echo "Connection Successfull😊 !!!";
 } catch (PDOException $e) {
-    echo "Failed to connect to Database!!! $e->getMessage()";
+    echo "Connection Failed😢 !!! $e->getMessage()";
 }
 ?>
